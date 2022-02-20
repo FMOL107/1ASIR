@@ -1,0 +1,52 @@
+﻿@font-face {
+  font-family: "Ribeye Marrow";
+    src: url("./ribeye-marrow.woff");
+    src: url("./ribeye-marrow.woff2");
+}
+@font-face {
+  font-family: "Paytone One";
+    src: url("./PaytoneOne-Regular.ttf");
+}
+@font-face {
+  font-family: "Just Another Hand";
+    src: url("./just-another-hand.woff");
+    src: url("./just-another-hand.woff2");
+}
+
+body {
+  font-size: medium;
+  background-color: rgb(203, 172, 77);
+}
+
+h1 {
+  font-family: "Ribeye Marrow";
+  font-size: 3em;
+  letter-spacing: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#vidagroucho {
+  margin-left: 30%;
+  margin-right: 30%;
+  line-height: 200%;
+  text-align: justify;
+  font-family: sans-serif, Arial, Helvetica, sans-serif;
+}
+
+#vidagroucho cite {
+  text-decoration: underline;
+}
+
+.ingles {
+  font-family: "Paytone One";
+  font-size: 2.5em; 
+  border: solid 3px;
+}
+
+.espanol {
+  color: white;
+  font-size: 3.5em;
+  letter-spacing: 1px;
+  font-family: "Just Another Hand";
+}

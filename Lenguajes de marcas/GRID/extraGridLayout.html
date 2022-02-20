@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Ejercicio sesión extra Grid Layout</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Franco Larrea" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style>
+      @media (min-width:401px){
+
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-areas:
+            "head head head head head head"
+            "nav nav nav . . ."
+            "main main main . aside aside"
+            "foot foot foot foot foot foot";
+        }
+
+        header {
+          grid-area: head;
+          /*background-color: aquamarine;*/
+        }
+        header h1 {
+          /*background-color: burlywood;*/
+          text-align: center;
+        }
+        header img {
+          height: 5em;
+          position: absolute;
+          left: 10px;
+          /*background-color: brown;*/
+        }
+      
+        nav {
+          grid-area: nav;
+          background-color: #9acd32;
+          padding: 1.5% 10%;
+          margin: 1% 5%;
+          text-align: justify;
+          font-size: large;
+        }
+
+        main {
+          grid-area: main;
+          background: #e9e9eb;
+          padding: 1% 10%;
+          margin: 2% 5%;
+        }
+        main h2 {
+          text-align: center;
+          /*background-color: chartreuse;*/
+        }
+
+        aside {
+          grid-area: aside;
+          background: #f8f8fb;
+          padding: 1% 10%;
+          margin: 3% 5%;
+          text-align: center;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+        }
+        
+        footer {
+          grid-area: foot;
+          text-align: center;
+          /*background: orange;*/
+        }
+      }
+
+      @media (max-width:401px){
+        
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-areas:
+            "head"
+            "nav"
+            "main"
+            "aside"
+            "foot";
+        }
+
+        header {
+          grid-area: head;
+          /*background-color: aquamarine;*/
+          margin: 1%;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+        }
+        header h1 {
+          /*background-color: burlywood;*/
+          text-align: center;
+          font-size: 3em;
+        }
+        header img {
+          height: 5em;
+          position: absolute;
+          left: 25px;
+          /*background-color: brown;*/
+        }
+      
+        nav {
+          grid-area: nav;
+          background-color: #9acd32;
+          padding: 5% 5%;
+          text-align: justify;
+          margin: 1%;
+        }
+        form {
+          border: 1px solid blue;
+          padding: 0px 10%;
+        }
+
+        main {
+          grid-area: main;
+          background: #e9e9eb;
+          padding: 5% 5%;
+          margin: 1%;
+          border: 1px solid black;
+          text-align: center;
+        }
+        main h2 {
+          margin: 0%;
+        }
+        main p {
+          border: 1px solid blue;
+        }
+
+        aside {
+          grid-area: aside;
+          background: #f8f8fb;
+          padding: 1% 5%;
+          text-align: center;
+          border-top: 1px solid black;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+          margin: 1%;
+        }
+        aside p {
+          margin-top: 0px;
+          border: 1px solid blue;
+        }
+
+        footer {
+          grid-area: foot;
+          text-align: center;
+          margin: 1%;
+          border-left: 1px solid black;
+          border-right: 1px solid black;
+          /*background: orange;*/
+        }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <header>
+        <img src="./lupa.png" alt="icono lupa">  
+        <h1>Blog de Programación</h1>
+        <p></p>
+      </header>
+      <nav>
+        <form action="#">
+          <label for="busqueda">Escribe la palabra a buscar:</label>
+          <input type="text" id="busqueda" name="busqueda" size="20">
+          <input type="submit" value="Buscar">
+        </form>
+      </nav>
+      <main>
+        <h2>Articulo 1</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting 
+          industry. Lorem Ipsum has been the industry's standard dummy text 
+          ever since the 1500s, when an unknown printer took a galley of type 
+          and scrambled it to make a type specimen book. It has survived not 
+          only five centuries, but also the leap into electronic typesetting, 
+          remaining essentially unchanged. It was popularised in the 1960s with 
+          the release of Letraset sheets containing Lorem Ipsum passages, and more 
+          recently with desktop publishing software like Aldus PageMaker including 
+          versions of Lorem Ipsum.
+        </p>
+      </main>
+      <aside>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting 
+          industry. Lorem Ipsum has been the industry's standard dummy text 
+          ever since the 1500s, when an unknown printer took a galley of type 
+          and scrambled it to make a type specimen book.<br/><br/>
+          It has survived not 
+          only five centuries, but also the leap into electronic typesetting, 
+          remaining essentially unchanged. 
+        </p>
+      </aside>
+      <footer>
+        <p>
+          It was popularised in the 1960s with the release of Letraset sheets 
+          containing Lorem Ipsum passages...
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

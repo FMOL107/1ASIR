@@ -1,0 +1,4 @@
+
+-   La página debe ser adaptable y se debe ver bien en tres tipos de dispositivos: móvil, tablet y pc.
+
+-   Todos los archivos deben pasar el validador, tanto html como css

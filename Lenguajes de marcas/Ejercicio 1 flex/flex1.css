@@ -1,0 +1,17 @@
+.container {
+    display: flex;
+}
+.nav {
+    width: 20%;
+}
+.superseccion {
+    width: 60%;
+}
+.publicacion {
+    width: 20%;
+}
+.footer {
+    color: white;
+    background-color: green;
+    height: 65px;
+}

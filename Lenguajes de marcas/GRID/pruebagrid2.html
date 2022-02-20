@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style type="text/css">
+ 
+
+      /* 
+        ES POSIBLE POSICIONAR LOS ELEMENTOS DE 2 FORMAS, 
+        FORMA 1: POR LÍNEAS-CELDAS <-- LA QUE VEMOS EN ESTE DOCUMENTO
+        FORMA 2: POR ÁREAS 
+      */
+
+      /* RENOMBRAR FILAS Y COLUMNAS */
+
+      /* Si a cada fila y cada columna la acompañamos a su izquierda / derecha con un nombre entre corchetes, 
+        podremos referirnos a los vértices de la tabla mediante esos nombres */
+      /* En caso de no darles nombres, podríamos referirnos a ellas mediante números del 0 al X (x es cantidad de vértices en x o y) */
+
+      .grid {
+        display: grid;
+        grid-template-columns: [x0] 1fr [x1] 1fr [x2] 1fr [x3];
+        grid-template-rows: [y0] 1fr [y1] 1fr [y2] 1fr [y3];
+      }
+
+
+      /* APLICANDO PROPIEDADES CONCRETAS DEL GRID A LOS ELEMENTOS */
+
+      /* 
+      Como recordatorio del archivo pruebagrid1.html, piensa que
+      estamos trabajando con una disposición similar a una tabla. 
+      Es decir, tenemos filas, tenemos columnas, y tenemos CELDAS.
+      */
+
+      /* Podemos indicar que un elemento ocupe varias celdas o filas */
+      /* Es decir, podemos decir que una cabecera ocupe todas las columnas de la primera fila */
+      /* o podemos decir que ocupe solo la primera columna, pero que sea de varias filas */
+      /* o decirle que ocupe varias columnas de varias filas */
+
+      /* ¿Cómo hacemos esto? */
+
+      /* con las propiedades grid-column-start y grid-column-end, y con las propiedades grid-row-start y grid-row-end */
+      /* podemos abreviar el inicio-fin de las columnas y filas mediante: 
+          grid-column: x0 / x3
+          grid-row: y0 / y1
+          Escribir así la disposición significa que ese elemento va a ocupar desde x0 hasta x3 
+          (recuerda que si no indicamos nombres pondríamos 0 / 3 en el caso del ejemplo de grid-column)
+      */
+
+      /* IMPORTANTE: */
+      /* HAY QUE CUADRAR BIEN LOS ESPACIOS, YA QUE EN CASO CONTRARIO, LOS ELEMENTOS NO FUNCIONARÁN CORRECTAMENTE */
+
+      /* PARA VER EL POSICIONAMIENTO DE ELEMENTOS POR ÁREA, PASAR AL SIGUIENTE DOCUMENTO (pruebagrid3.html) */
+
+      .header {
+        background: red;
+        grid-column-start: x0;
+        grid-column-end: x3;
+
+        /* Equivalente a */
+        grid-column: x0 / x3;
+      }
+
+      .sidebar {
+        background: blue;
+        grid-row: y1 / y2;
+        color: white;
+      }
+
+      .content {
+        background: green;
+        grid-column: x1 / x3;
+        grid-row: y1 / y2;
+      }
+
+      .footer {
+        background: yellow;
+        grid-column: x0 / x3;
+        grid-row: y2 / y3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="header">Header</div>
+      <div class="sidebar">Sidebar</div>
+      <div class="content">Content</div>
+      <div class="footer">Footer</div>
+    </div>
+  </body>
+</html>

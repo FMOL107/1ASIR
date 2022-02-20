@@ -1,0 +1,70 @@
+.header {
+    width: 100%;
+}
+.header img {
+    display: block;
+    margin: auto;
+}
+.navegacion {
+    background-color: peachpuff;
+    text-align: center;
+    height: 45px;
+}
+.navegacion ul {
+    line-height: 45px;
+}
+.navegacion ul li {
+    list-style: none;
+    display: inline;
+}
+.navegacion ul li a {
+    color: black;
+    text-decoration-line: none;
+    background-color: orange;
+    margin: 3px;
+}
+#principal {
+    width: 100%;
+    float: left;
+}
+#col1 {
+    width: 70%;
+    float: left;
+}
+#col1 .articulo:nth-child(2) {
+    background-color: darkgrey;
+}
+#col2 {
+    width: 30%;
+    float: right;
+}
+#col2 .zonaPubli img {
+    border: solid black 1px;
+}
+
+#autores {
+    width: 70%;
+    float: left;
+    background-color: powderblue;
+}
+#autores div:first-child {
+    width: 50%;
+    float: left;
+}
+#autores div:nth-child(2) {
+    width: 50%;
+    float: left;
+}
+#autores div:first-child h2, #autores div:first-child p {
+    text-align: center;
+}
+#autores div:nth-child(2) h2, #autores div:nth-child(2) p {
+    text-align: center;
+}
+#copyright {
+    width: 30%;
+    float: left;
+}
+#copyright p {
+    text-align: center;
+}

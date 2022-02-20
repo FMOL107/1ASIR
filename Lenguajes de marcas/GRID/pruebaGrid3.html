@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style type="text/css">
+       
+      /* PODEMOS OPTAR POR ORGANIZAR LOS ELEMENTOS POR ÁREAS EN LUGAR DE POR FILAS/COLUMNAS NUMERADAS */
+      /* Para hacer esto, en lugar de indicar grid-template-rows o grid-template-columns, vamos a indicar:
+        grid-template-areas
+        a esta propiedad le indicaremos entre comillas dobles "" separadas por espacios cada una de las filas y columnas disponibles y su nombre
+        En una fila tenemos varias columnas, lo indicaremos del siguiente modo "ejemplo1 ejemplo2"
+        Si queremos indicar que una columna ocupará más que otra, volvemos a nombrar esa columna
+        de este modo "ejemplo1 ejemplo1 ejemplo2" <--- Eso significa 2 columnas, la primera (ejemplo1) ocupa el doble que la segunda
+       */
+
+       /* Si queremos indicar un hueco en blanco en una fila, pondremos un punto, por ejemplo "ejemplo1 . " */
+      
+      .grid {
+        display: grid;
+        grid-template-areas:
+          "head head"
+          "menu main"
+          "foot .";
+      }
+
+      /* En cada elemento en concreto indicaremos con la propiedad grid-area dónde encuadrar dicho elemento */
+
+      .a {
+        grid-area: head;
+        background: blue;
+      }
+      .b {
+        grid-area: menu;
+        background: red;
+      }
+      .c {
+        grid-area: main;
+        background: green;
+      }
+      .d {
+        grid-area: foot;
+        background: orange;
+      }
+
+      /* PASAR AL ÚLTIMO HTML (pruebagrid4.html) PARA VER LOS GAPS ENTRE FILAS/COLUMNAS */
+
+    </style>
+  </head>
+  <body>
+    <!-- contenedor -->
+    <div class="grid">
+      <!-- cada uno de los ítems del grid -->
+      <div class="a">head</div>
+      <div class="b">menu</div>
+      <div class="c">main</div>
+      <div class="d">foot</div>
+    </div>
+  </body>
+</html>

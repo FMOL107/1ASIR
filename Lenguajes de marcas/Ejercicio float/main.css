@@ -1,0 +1,20 @@
+.nav {
+    width: 20%;
+    float: left;
+    position: absolute;
+}
+.seccion {
+    width: 60%;
+    position: relative;
+        left: 20%;
+}
+.social {
+    width: 20%;
+    position: absolute;
+        right: 50px; top: 20px;
+}
+.footer {
+    color: white;
+    background-color: green;
+    height: 65px;
+}

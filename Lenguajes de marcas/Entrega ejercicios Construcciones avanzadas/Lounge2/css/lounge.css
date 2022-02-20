@@ -1,0 +1,53 @@
+#garantia {
+    border: 1px solid black;
+    padding: 25px;
+    padding-left: 80px;
+    margin: 30px;
+    line-height: 1.9em;
+    color: #444444;
+    font: italic Georgia, 'Times New Roman', Times, serif;
+    background: #a7cece url("../images/background.gif") no-repeat left top;
+    /*
+    background-color: #a7cece;
+    background-image: url("../images/background.gif");
+    background-repeat: no-repeat;
+    background-position: left top;  
+    */
+}
+
+.cd {
+    font-style: italic;
+}
+.artist {
+    font-weight: bold;
+}
+
+p a:link {
+    color: #0f7c7c;
+}
+p a:visited {
+    color: #333131;
+}
+p a:hover {
+    background: #e6788a;
+    color: #175555;
+}
+p a:hover #eli {
+    display: none;
+}
+
+#menu {
+    text-align: center;
+}
+
+#menu li {
+    list-style-type: none;
+    display: inline;
+    padding: 0% 5%;
+}
+#menu li a {
+    text-decoration: none;
+    color: #1b002b;
+    background: #f14343;
+    border: solid red;
+}

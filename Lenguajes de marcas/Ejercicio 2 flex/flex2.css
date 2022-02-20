@@ -1,0 +1,22 @@
+h1 {
+    text-align: center;
+}
+#datos {
+    width: 20%;
+    margin-left: 10%;
+    float: left;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    width: 62%;
+    margin-left: 20%;
+}
+#contenido ul {
+    display: flex;
+    padding-inline-start: 0px;
+}
+#contenido ul li {
+    list-style: none;
+    flex: 1 1 0;
+}

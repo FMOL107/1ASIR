@@ -1,0 +1,10 @@
+#garantia {
+    border: 1px solid black;
+    padding: 25px;
+    margin-right: 35%;
+    line-height: 1.5em;
+    font-style: italic;
+    color: #444444;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: white;
+}

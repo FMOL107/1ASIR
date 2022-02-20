@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style type="text/css">
+      /* Con display: grid; podemos estructurar el contenido de nuestra página en filas y columnas de longitud variable */
+      /* Para entender este tipo de display es conveniente antes haber entendido display flex */
+ 
+      /* CONTENEDOR */
+      /* Al igual que ocurría con flex, debemos indicar en un div contenedor que funcionará como grid (cuadrícula) */
+      /* Dentro del contenedor, indicaremos la cantidad de filas y la cantidad de columnas que tendremos */
+      /* grid-template-columns: XXX lo usaremos para indicar la cantidad de columnas, por cada columna que tengamos, añadiremos su tamaño. Para añadir más, las separamos con espacios */
+      /* grid-template-rows: XXX lo usaremos para indicar la cantidad de filas, indicaremos el tamaño, y si tenemos más de una, las separamos con espacios */
+      /* para indicar cuánto ocupan las filas o columnas, podemos hacerlo con valores absolutos (píxeles), o usar fr (fracciones), que es lo que se suele utilizar */
+      /* las fracciones representan una porción del tamaño con respecto al otro elemento, por ejemplo, si tenemos 1fr 2fr, significa que el segundo elemento ocupa el doble que el primero */
+
+      /* IMPORTANTE MEDIDAS */
+      /* si indicamos un grid-template-columns de 50px y 300px significa que tenemos dos columnas, una columna de 50px de ANCHO, y otra de 300px de ANCHO */
+      /* si indicamos un grid template-rows de 200px y 75px significa que tenemos dos filas, una fila de 200px de ALTO, y otra de 75px de ALTO */
+
+      /* SEGUIR EN PRUEBAGRID2.HTML PARA MÁS EXPLICACIÓN  */
+
+      /* PRUEBA TOQUETEANDO LOS GRID PUESTOS CON PX Y CON FR */
+      /* .grid {
+        display: grid;
+        grid-template-columns: 50px 300px;
+        grid-template-rows: 200px 75px;
+      } */
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr 1fr;
+      }
+
+      .a {
+        background-color: red;
+      }
+      .b {
+        background-color: blue;
+      }
+      .c {
+        background-color: yellow;
+      }
+      .d {
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <!-- contenedor -->
+      <div class="a">Item 1</div>
+      <!-- cada uno de los ítems del grid -->
+      <div class="b">Item 2</div>
+      <div class="c">Item 3</div>
+      <div class="d">Item 4</div>
+    </div>
+  </body>
+</html>

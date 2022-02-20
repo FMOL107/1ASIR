@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Prueba</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui"
+    />
+    <style type="text/css">
+ 
+
+      /* Podemos especificar qué espaciado dejar entre filas y columnas */
+      /* Para ello usaremos la propiedad column-gap y row-gap */
+      /* Podemos unificar ambos en uno con gap */
+      /* Podemos indicar los gaps con medidas absolutas (px) o relativas (%) */
+      .grid {
+        display: grid;
+        grid-template-areas:
+          "head head"
+          "menu main"
+          "foot foot";
+
+        /* 
+          column-gap: 100px;
+          row-gap: 10px; 
+        */
+
+        /* gap: <row-gap> <column-gap> */
+        gap: 20% 60%;
+
+        /* Equivalente a grid-gap: 40px 40px; */
+        /* gap: <rowcolumn-gap> */
+        /* gap: 40px; */
+
+        /* PODEMOS COMBINAR ESTAS MEDIDAS CON MARGINS, PADDINGS, BORDERS... UNA COSA NO EXCLUYE LAS OTRAS */
+      }
+
+      .a {
+        grid-area: head;
+        background: blue;
+      }
+      .b {
+        grid-area: menu;
+        background: red;
+      }
+      .c {
+        grid-area: main;
+        background: green;
+      }
+      .d {
+        grid-area: foot;
+        background: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <!-- contenedor -->
+      <div class="a">Item 1</div>
+      <!-- cada uno de los ítems del grid -->
+      <div class="b">Item 2</div>
+      <div class="c">Item 3</div>
+      <div class="d">Item 4</div>
+    </div>
+  </body>
+</html>
